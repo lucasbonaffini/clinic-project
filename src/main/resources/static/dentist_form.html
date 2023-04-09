@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clinic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dentist/post_dentist.js"></script>
+</head>
+<body>
+<header class="p-3 text-bg-dark">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="http://localhost:8080/index.html" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="http://localhost:8080/dentist_list.html" class="nav-link px-2 text-white">Dentists</a></li>
+                <li><a href="http://localhost:8080/patient_list.html" class="nav-link px-2 text-white">Patients</a></li>
+                <li><a href="http://localhost:8080/appointment_list.html"
+                       class="nav-link px-2 text-white">Appointments</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                       aria-label="Search">
+            </form>
+
+        </div>
+    </div>
+</header>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-sm-7" style="background-color:#e6fffa; padding:10px; border-radius:3px">
+            <h3>Register Dentist</h3>
+            <form id="add_dentist">
+                <div class="form-group">
+                    <label class="control-label" for="enrollment">Enrollment:</label>
+                    <input type="number" class="form-control" id="enrollment"
+                           placeholder="enrollment" name="enrollment" required></input>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="lastname">Lastname:</label>
+                    <input type="text" class="form-control" id="lastname"
+                           placeholder="lastname" name="lastname" required></input>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="name">Name:</label>
+                    <input type="text" class="form-control" id="name"
+                           placeholder="name" name="name" required></input>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary" id="btn-add-dentist">Save</button>
+            </form>
+            <div id="response" style="display:none; margin-top:10px">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

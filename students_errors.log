@@ -1,0 +1,39 @@
+[2023-04-0321:20:36] [ ERROR] [PatientService:49] detached entity passed to persist: com.project.clinic.model.Address
+[2023-04-0321:23:34] [ ERROR] [AddressService:116] street can't be null or empty
+[2023-04-0321:23:35] [ ERROR] [PatientService:48] detached entity passed to persist: com.project.clinic.model.Address
+[2023-04-0322:38:27] [ ERROR] [AppointmentService:164] description can't be null of empty
+[2023-04-0322:53:40] [ ERROR] [AppointmentService:164] description can't be null of empty
+[2023-04-0621:44:03] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0621:52:16] [ WARN ] [AppointmentService:107] The appointment 2 doesn't exist in our database
+[2023-04-0621:53:50] [ WARN ] [AppointmentService:107] The appointment 2 doesn't exist in our database
+[2023-04-0621:55:52] [ WARN ] [AppointmentService:107] The appointment 2 doesn't exist in our database
+[2023-04-0621:57:41] [ WARN ] [AppointmentService:107] The appointment 3 doesn't exist in our database
+[2023-04-0621:58:08] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0621:59:42] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:00:25] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:01:44] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:01:56] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:10:04] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:10:48] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:11:09] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:12:48] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:16:38] [ ERROR] [AppointmentService:143] Cannot invoke "com.project.clinic.model.Patient.getDni()" because the return value of "com.project.clinic.model.Appointment.getPatient()" is null
+[2023-04-0622:22:56] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:27:52] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:32:22] [ WARN ] [AppointmentService:107] The appointment 4 doesn't exist in our database
+[2023-04-0622:56:27] [ WARN ] [AppointmentService:125] The appointment 4 doesn't exist in our database
+[2023-04-0622:56:27] [ ERROR] [GlobalExceptionHandler:21] java.lang.Exception
+[2023-04-0622:57:55] [ WARN ] [AppointmentService:125] The appointment 4 doesn't exist in our database
+[2023-04-0622:57:55] [ ERROR] [GlobalExceptionHandler:21] java.lang.Exception
+[2023-04-0623:03:18] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0623:05:54] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0623:13:06] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0623:15:47] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0701:16:25] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0701:24:33] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0703:33:18] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0703:35:08] [ ERROR] [GlobalExceptionHandler:21] Request method 'PUT' is not supported
+[2023-04-0703:45:41] [ ERROR] [AppointmentService:141] Cannot invoke "com.project.clinic.model.Patient.getDni()" because the return value of "com.project.clinic.model.Appointment.getPatient()" is null
+[2023-04-0720:41:46] [ ERROR] [AppointmentService:143] Cannot invoke "com.project.clinic.model.Patient.getDni()" because the return value of "com.project.clinic.model.Appointment.getPatient()" is null
+[2023-04-0721:12:49] [ ERROR] [AppointmentService:143] Cannot invoke "com.project.clinic.model.Patient.getDni()" because the return value of "com.project.clinic.model.Appointment.getPatient()" is null
+[2023-04-0721:13:26] [ ERROR] [AppointmentService:143] Cannot invoke "com.project.clinic.model.Patient.getDni()" because the return value of "com.project.clinic.model.Appointment.getPatient()" is null
