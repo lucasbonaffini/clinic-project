@@ -20,8 +20,8 @@ public class SpringConfig {
             .version("v0.0.1")
             .license(new License().name("Apache 2.0").url("http://springdoc.org")))
         .externalDocs(new ExternalDocumentation()
-            .description("SpringShop Wiki Documentation")
-            .url("https://springshop.wiki.github.org/docs"));
+            .description("Github Project")
+            .url("https://github.com/lucasbonaffini/clinic-project"));
   }
   
   @Bean
