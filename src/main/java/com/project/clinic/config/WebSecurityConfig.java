@@ -30,8 +30,8 @@ public class WebSecurityConfig {
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     return http
         .authorizeHttpRequests(authorize -> authorize
-            .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll() // Permitimos recursos estáticos como CSS y JS
-            .requestMatchers(PathRequest.toH2Console()).permitAll() // Permitimos acceso a la consola de H2
+            .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
+            .requestMatchers(PathRequest.toH2Console()).permitAll()
             .requestMatchers("/", "/login").permitAll()
             .requestMatchers("/dentists/**", "/patients/**").hasRole("ADMIN")
             .anyRequest().authenticated()
