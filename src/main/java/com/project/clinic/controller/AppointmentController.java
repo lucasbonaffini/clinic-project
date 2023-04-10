@@ -10,6 +10,10 @@ import com.project.clinic.model.Patient;
 import com.project.clinic.service.AppointmentService;
 import com.project.clinic.service.DentistService;
 import com.project.clinic.service.PatientService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,13 +32,22 @@ public class AppointmentController {
     @Autowired
     private PatientService patientService;
 
-    @PostMapping()
-    public ResponseEntity<?> register(@RequestBody AppointmentDTO app) {
-        appointmentService.createAppointment(app);
-        return ResponseEntity.ok(HttpStatus.OK);
 
+    @Operation(summary = "Get all appointments")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success | OK"),
+            @ApiResponse(responseCode = "404", description = "Bad Request", content = @Content) })
+    @GetMapping()
+    public ResponseEntity<List<Appointment>> listAppointments() {
+
+        return ResponseEntity.ok(appointmentService.listAppointments());
     }
 
+    @Operation(summary = "Get appointment by id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success | OK"),
+            @ApiResponse(responseCode = "404", description = "Not Found", content = @Content),
+            @ApiResponse(responseCode = "404", description = "Bad Request", content = @Content) })
     @GetMapping("/{id}")
     public ResponseEntity<Appointment> search(@PathVariable Integer id) {
         try {
@@ -44,12 +57,22 @@ public class AppointmentController {
         }
     }
 
-    @GetMapping()
-    public ResponseEntity<List<Appointment>> listAppointments() {
+    @Operation(summary = "Create an appointment")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success | OK"),
+            @ApiResponse(responseCode = "404", description = "Bad Request", content = @Content) })
+    @PostMapping()
+    public ResponseEntity<?> register(@RequestBody AppointmentDTO app) {
+        appointmentService.createAppointment(app);
+        return ResponseEntity.ok(HttpStatus.OK);
 
-        return ResponseEntity.ok(appointmentService.listAppointments());
     }
 
+    @Operation(summary = "Update an appointment")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success | OK"),
+            @ApiResponse(responseCode = "404", description = "Not Found", content = @Content),
+            @ApiResponse(responseCode = "404", description = "Bad Request", content = @Content) })
     @PutMapping()
     public ResponseEntity<?> update(@RequestBody AppointmentDTO appointment) {
         appointmentService.modifyAppointment(appointment);
@@ -57,6 +80,11 @@ public class AppointmentController {
 
     }
 
+    @Operation(summary = "Delete an appointment")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success | OK"),
+            @ApiResponse(responseCode = "404", description = "Not Found", content = @Content),
+            @ApiResponse(responseCode = "404", description = "Bad Request", content = @Content) })
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Integer id) {
         try {
@@ -68,6 +96,11 @@ public class AppointmentController {
 
     }
 
+    @Operation(summary = "Get an appointment by dentist enrollment")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success | OK"),
+            @ApiResponse(responseCode = "404", description = "Not Found", content = @Content),
+            @ApiResponse(responseCode = "404", description = "Bad Request", content = @Content) })
     @GetMapping("/getByEnrollment")
     public List<Appointment> listAppointmentByEnrollment(@RequestParam Integer enrollment) {
         return appointmentService.searchAppointmentByEnrollment(enrollment);
