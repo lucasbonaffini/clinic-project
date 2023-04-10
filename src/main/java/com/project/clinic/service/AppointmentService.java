@@ -118,8 +118,11 @@ public class AppointmentService {
             validate(app.getPatient_id(), app.getDentist_id(), app.getDate(), app.getDescription());
 
             Appointment response = appointmentRepository.findById(app.getId()).orElse(null);
-
+            Patient patient = patientService.findByDni(app.getPatient_id()).orElse(null);
+            Dentist dentist = dentistService.findById(app.getDentist_id()).orElse(null);
             if (response != null) {
+                response.setPatient(patient);
+                response.setDentist(dentist);
                 response.setDate(app.getDate());
                 response.setDescription(app.getDescription());
 
