@@ -143,7 +143,7 @@ public class AppointmentService {
                 throw new BadRequestException("dni can't be null or fewer than 0");
             }
             if (enrollment == null || enrollment < 0) {
-                throw new BadRequestException("enrollment can't be null or fewr than 0");
+                throw new BadRequestException("enrollment can't be null or fewer than 0");
             }
             if (date == null || date.compareTo(new Date()) < 0) {
                 throw new BadRequestException("date can't be null or before today");
