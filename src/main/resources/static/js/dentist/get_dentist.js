@@ -14,19 +14,19 @@ window.onload = function(){
     .then(function(data){
         console.log(data)
 
-        renderizarTabla(data)
+        renderTable(data)
 
     })
     const form = document.querySelector('form');
-    form.addEventListener('input', buscarPorApellido);
+    form.addEventListener('input', searchByLastname);
 
-    function buscarPorApellido(event) {
-      event.preventDefault(); // prevenir comportamiento predeterminado del formulario
+    function searchByLastname(event) {
+      event.preventDefault();
 
       const inputLastname = document.querySelector('#inputLastname');
       const lastname = inputLastname.value.trim();
 
-      // Realizar solicitud de búsqueda
+
       let url = '/dentists/getLastnameLike?lastname=' + lastname;
 
       const settings = {
@@ -40,11 +40,11 @@ window.onload = function(){
         .then(function(data) {
           console.log(data);
 
-          renderizarTabla(data);
+          renderTable(data);
         });
     }
     }
-    function renderizarTabla(datos){
+    function renderTable(datos){
 
         let table = document.querySelector('#tableDentists');
         table.innerHTML = "";

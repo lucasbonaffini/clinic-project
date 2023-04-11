@@ -1,6 +1,5 @@
 function deleteBy(enrollment) {
-           //con fetch invocamos a la API de dentistas con el método DELETE
-           //pasandole el id en la URL
+
           const url = '/dentists/'+ enrollment;
           const settings = {
               method: 'DELETE'
@@ -20,8 +19,7 @@ function deleteBy(enrollment) {
 
             })
             .catch(error => {
-                 //Si hay algun error se muestra un mensaje diciendo que el dentista
-                 //no se pudo guardar y se intente nuevamente
+
                   let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
                                      '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
                                      '<strong> Error try again</strong> </div>'

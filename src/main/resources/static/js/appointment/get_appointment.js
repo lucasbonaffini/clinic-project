@@ -14,19 +14,19 @@ window.onload = function(){
     .then(function(data){
         console.log(data)
 
-        renderizarTabla(data)
+        renderTable(data)
 
     })
     const form = document.querySelector('form');
         form.addEventListener('input', searchByEnrollment);
 
         function searchByEnrollment(event) {
-          event.preventDefault(); // prevenir comportamiento predeterminado del formulario
+          event.preventDefault();
 
           const inputEnrollment = document.querySelector('#inputEnrollment');
           const enrollment = inputEnrollment.value.trim();
 
-          // Realizar solicitud de búsqueda
+
           let url = '/appointments/getByEnrollment?enrollment=' + enrollment;
 
           const settings = {
@@ -40,13 +40,13 @@ window.onload = function(){
             .then(function(data) {
               console.log(data);
 
-              renderizarTabla(data);
+              renderTable(data);
             });
         }
 
     }
 
-    function renderizarTabla(datos){
+    function renderTable(datos){
 
         let table = document.querySelector('#tableAppointments');
         table.innerHTML = "";

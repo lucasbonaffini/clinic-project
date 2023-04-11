@@ -14,14 +14,14 @@ window.onload = function(){
     .then(function(data){
         console.log(data)
 
-        renderizarTabla(data)
+        renderTable(data)
 
     })
 
     const form = document.querySelector('form');
-    form.addEventListener('input', buscarPorApellido);
+    form.addEventListener('input', searchByLastname);
 
-    function buscarPorApellido(event) {
+    function searchByLastname(event) {
       event.preventDefault();
 
       const inputLastname = document.querySelector('#inputLastname');
@@ -41,12 +41,12 @@ window.onload = function(){
         .then(function(data) {
           console.log(data);
 
-          renderizarTabla(data);
+          renderTable(data);
         });
     }
     }
 
-    function renderizarTabla(datos){
+    function renderTable(datos){
 
         let table = document.querySelector('#tablePatients');
         table.innerHTML = "";
