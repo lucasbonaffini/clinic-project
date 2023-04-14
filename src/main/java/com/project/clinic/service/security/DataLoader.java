@@ -2,7 +2,7 @@ package com.project.clinic.service.security;
 
 import com.project.clinic.exceptions.BadRequestException;
 import com.project.clinic.login.LoginUser;
-import com.project.clinic.login.Rol;
+import com.project.clinic.login.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -22,7 +22,7 @@ public class DataLoader implements ApplicationRunner {
         .username("admin")
         .email("admin@gmail.com")
         .password("admin")
-        .rolls(Set.of(new Rol("ADMIN"), new Rol("USER")))
+        .roles(Set.of(new Role("ADMIN"), new Role("USER")))
         .build()
     );
     loginUserService.upload(
@@ -30,7 +30,7 @@ public class DataLoader implements ApplicationRunner {
             .username("user")
             .email("user@gmail.com")
             .password("user")
-            .rolls(Set.of(new Rol("USER")))
+            .roles(Set.of(new Role("USER")))
             .build()
     );
   }

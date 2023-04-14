@@ -31,5 +31,5 @@ public class LoginUser {
             joinColumns = @JoinColumn(name="user_id"),
             inverseJoinColumns = @JoinColumn(name="rol_id")
     )
-    private Set<Rol> rolls;
+    private Set<Role> roles;
 }

@@ -8,8 +8,8 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "rolls")
-public class Rol {
+@Table(name = "roles")
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "rol_seq")
     @SequenceGenerator(name = "rol_seq", sequenceName = "rol_seq", allocationSize = 1)
@@ -18,7 +18,7 @@ public class Rol {
     @Setter
     private String name;
 
-    public Rol(String name) {
+    public Role(String name) {
         this.name = name;
     }
 }

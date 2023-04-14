@@ -19,7 +19,7 @@ public class LoginUserService {
   public LoginUser upload(LoginUser user) throws BadRequestException {
     if (user == null)
       throw new BadRequestException("User can't be null");
-    rolRepository.saveAll(user.getRolls());
+    rolRepository.saveAll(user.getRoles());
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     return loginUserRepository.save(user);
   }

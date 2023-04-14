@@ -1,7 +1,7 @@
 package com.project.clinic.config;
 
 
-import com.project.clinic.login.Rol;
+import com.project.clinic.login.Role;
 import com.project.clinic.repository.security.LoginUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
@@ -48,7 +48,7 @@ public class WebSecurityConfig {
     return username -> userRepository.findByUsername(username)
         .map(u -> User.withUsername(u.getUsername())
             .password(u.getPassword())
-            .roles(u.getRolls().stream().map(Rol::getName).toArray(String[]::new))
+            .roles(u.getRoles().stream().map(Role::getName).toArray(String[]::new))
             .build())
         .orElseThrow(() -> new RuntimeException("Username : " + username + " doesn't exist in our system"));
 
