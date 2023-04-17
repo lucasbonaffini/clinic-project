@@ -1,9 +1,11 @@
 package com.project.clinic.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter @Setter
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class DentistDTO {
 
     private Integer enrollment;

@@ -3,12 +3,14 @@ package com.project.clinic.dto;
 import com.project.clinic.model.Address;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.OneToOne;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
-@Getter @Setter
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class PatientDTO {
     private Integer id;
 

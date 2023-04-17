@@ -2,12 +2,13 @@ package com.project.clinic.dto;
 
 import com.project.clinic.model.Dentist;
 import com.project.clinic.model.Patient;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.Date;
-@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class AppointmentDTO {
     private Integer id;
     private Integer patient_id;
