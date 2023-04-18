@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk18
+FROM eclipse-temurin:18
 
 ARG JAR_FILE=target/clinic-0.0.1-SNAPSHOT.jar
 
